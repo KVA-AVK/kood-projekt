@@ -35,7 +35,7 @@
               <label for="email" >Email (Kohustuslik) </label>
             </div>
             <div class="col-2">
-              <input type="email" id="email" name="email"placeholder="Sinu email..">
+              <input type="text" id="email" name="email" onfocus="this.placeholder='Sinu email..'" placeholder="">
             </div>
           </div>
 
@@ -103,7 +103,7 @@
           <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
           <output class="price-output" for="price"></output>
           <p>* Kohustuslikud väljad peavad olema täidetud</p>
-          <input class="contact-submit" type="submit" value="Send">
+          <input class="contact-submit" type="submit" value="Send" onclick='alert("Tänud!!")';>
           <input class="contact-reset" type="reset" onclick="myFunction()" value="Reset">
 
 
