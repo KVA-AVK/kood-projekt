@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-const body = document.querySelector('body');
-body.style.margin = 0;
+const transbox = document.querySelector('.transbox');
+transbox.style.margin = 0;
 const c = canvas.getContext('2d');
 
 class Circle {

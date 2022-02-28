@@ -3,11 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Karmeni projekt
-  </title>
-  
+  <title>Karmeni projekt</title>
   <link rel="stylesheet" href="../stylesheet.css">
-  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -15,99 +12,91 @@
     <div class="header-logo">Karmeni Projekt :D</div>
     <div class="header-list">
       <ul>
-        <li> <a href="../index.html">Esileht</a></li>
+        <li><a href="../index.html">Esileht</a></li>
         <li><a href="../lessons.html">Õppetunnid</a></li>
-
       </ul>
     </div>
   </div>
+  <!-- HEADER UP TO HERE -->
 
   <div class="main">
-    <div>
-      <div class="background">
-        <!-- <div class="transbox"> -->
+    <div class="background">
+      <!-- <div class="transbox"> -->
 
 
-        <form class="contact-form" id="contact-form">
-          <h3 class="section-title">Küsimustik</h3>
+      <form class="contact-form" id="contact-form">
+        <h3 class="section-title">Küsimustik</h3>
 
 
-          
-            <div class="row">
-              <i class="fa fa-envelope icon"></i>
-              <input type="email" id="email" name="email" onfocus="this.placeholder='Sinu email..'" placeholder="" >
-            </div>
- 
 
-          <div class="row">
-            <i class="fa fa-phone icon"> </i>
-              <input type="number" id="tel" name="tel"placeholder="Sinu telefoninumber..." required >
-          </div>
-
-          <div class="row">
-            <i class="fa fa-image icon"></i>
-            <input type="file" name="file" id="file" accept="image/*" multiple >
-          </div>
-
-          <div class="row">
-            <i class="fa fa-comment icon"></i>
-            <input id="msg" name="user_message" placeholder="Sinu sõnum..."></input>
-          </div>
-
-          <fieldset>
-            <legend>Vali kõik juurviljad, mida sulle meeldib süüa</legend>
-            <ul>
-              <li>
-                <label for="carrots">Porgandid</label>
-                <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
-              </li>
-              <li>
-                <label for="peas">Herned</label>
-                <input type="checkbox" id="peas" name="vegetable" value="peas">
-              </li>
-              <li>
-                <label for="cabbage">Kapsas</label>
-                <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Mis on sinu lemmik eine?</legend>
-            <ul>
-              <li>
-                <label for="soup">Supp</label>
-                <input type="radio" id="soup" name="meal" value="soup" checked>
-              </li>
-              <li>
-                <label for="curry">Karri</label>
-                <input type="radio" id="curry" name="meal" value="curry">
-              </li>
-              <li>
-                <label for="pizza">Pitsa</label>
-                <input type="radio" id="pizza" name="meal" value="pizza">
-              </li>
-            </ul>
-          </fieldset>
-          <input type="color" name="color" id="color">
-          <label for="price">Vali maksimaalne maja hind: </label>
-          <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
-          <output class="price-output" for="price"></output>
-          <p>* Kohustuslikud väljad peavad olema täidetud</p>
-          <input class="contact-submit" type="submit" value="Send" onclick='alert("Tänud!!")';>
-          <input class="contact-reset" type="reset" onclick="myFunction()" value="Reset">
+        <div class="row">
+          <i class="fa fa-envelope icon"></i>
+          <input type="email" id="email" name="email" onfocus="this.placeholder='Sinu email..'" placeholder="">
+        </div>
 
 
+        <div class="row">
+          <i class="fa fa-phone icon"> </i>
+          <input type="number" id="tel" name="tel" placeholder="Sinu telefoninumber..." required>
+        </div>
+
+        <div class="row">
+          <i class="fa fa-image icon"></i>
+          <input type="file" name="file" id="file" accept="image/*" multiple>
+        </div>
+
+        <div class="row">
+          <i class="fa fa-comment icon"></i>
+          <input id="msg" name="user_message" placeholder="Sinu sõnum..."></input>
+        </div>
+
+        <fieldset>
+          <legend>Vali kõik juurviljad, mida sulle meeldib süüa</legend>
+          <ul>
+            <li>
+              <label for="carrots">Porgandid</label>
+              <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
+            </li>
+            <li>
+              <label for="peas">Herned</label>
+              <input type="checkbox" id="peas" name="vegetable" value="peas">
+            </li>
+            <li>
+              <label for="cabbage">Kapsas</label>
+              <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
+            </li>
           </ul>
-        </form>
-      </div>
-      <!-- </div> -->
+        </fieldset>
+        <fieldset>
+          <legend>Mis on sinu lemmik eine?</legend>
+          <ul>
+            <li>
+              <label for="soup">Supp</label>
+              <input type="radio" id="soup" name="meal" value="soup" checked>
+            </li>
+            <li>
+              <label for="curry">Karri</label>
+              <input type="radio" id="curry" name="meal" value="curry">
+            </li>
+            <li>
+              <label for="pizza">Pitsa</label>
+              <input type="radio" id="pizza" name="meal" value="pizza">
+            </li>
+          </ul>
+        </fieldset>
+        <input type="color" name="color" id="color">
+        <label for="price">Vali maksimaalne maja hind: </label>
+        <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+        <output class="price-output" for="price"></output>
+        <p>* Kohustuslikud väljad peavad olema täidetud</p>
+        <input class="contact-submit" type="submit" value="Send" onclick='alert("Tänud!!")' ;>
+        <input class="contact-reset" type="reset" onclick="myFunction()" value="Reset">
+
+      </form>
     </div>
+    <!-- </div> -->
   </div>
 
-  <div class="footer">
-
-    <a href="https://github.com/KVA-AVK/kood-projekt" target="_blank"> Github | KVA-AVK</a>
-    </div>
 
   <script>
     function myFunction() {
@@ -117,14 +106,18 @@
     const email = document.getElementById("email");
 
     email.addEventListener("input", function (event) {
-    if (email.validity.typeMismatch) {
-      email.setCustomValidity("I am expecting an e-mail address!");
-    } else {
-      email.setCustomValidity("");
-    }
-  });
+      if (email.validity.typeMismatch) {
+        email.setCustomValidity("I am expecting an e-mail address!");
+      } else {
+        email.setCustomValidity("");
+      }
+    });
   </script>
 
+<!-- FOOTER FROM HERE -->
+<div class="footer">
+  <a href="https://github.com/KVA-AVK/kood-projekt" target="_blank"> Github | KVA-AVK</a>
+</div>
 </body>
 
 </html>
