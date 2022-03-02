@@ -2,16 +2,15 @@ html,body {
   font-family: "Avenir Next";
   margin: 0;
   padding: 0;
-  width:100%;
-  height: 100%;
+
   background-color: rgba(0, 0, 0, 1);
 
 }
 
-.header {
+.navbar {
   background-color: #bc426a;
   color: #fff;
-  height: 15%;
+
 }
 
 .header-logo {
@@ -29,18 +28,16 @@ li {
   list-style: none;
 }
 
-.footer {
-  background-color: #83725d; 
-  text-align: center;
-  color: #fff;
-  height: 5%;
-  padding: 20px 0px;
+.container-fluid {
+  height: 72%;
 }
+
 
 .background {
     background-image: url("images/lego.jpg");
     background-size: contain;
     padding: 20px;
+    height: 100%;
 }
 
 .transbox {
@@ -63,6 +60,20 @@ div.transbox a {
   font-size: 24px;
   font-weight: bold;
   color: #2e2e2e;
+}
+
+.jumbotron {
+  background-color: #83725d; 
+  text-align: center;
+  color: #fff;
+
+
+}
+
+.footer.jumbotron {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
 }
 
 
