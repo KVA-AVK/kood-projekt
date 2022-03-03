@@ -19,7 +19,7 @@ addEventListener("mousemove", (e) => {
 });
 
 addEventListener(
-  "touchmove",
+ "touchmove",
   (e) => {
     e.preventDefault();
     cursor.x = e.touches[0].clientX;
@@ -43,8 +43,8 @@ function generateParticles(amount) {
 }
 
 function generateColor() {
-  let hexSet = "0123456789ABCDEF";
-  let finalHexString = "#";
+  let hexSet ="0123456789ABCDEF";
+  let finalHexString ="#";
   for (let i = 0; i < 6; i++) {
     finalHexString += hexSet[Math.ceil(Math.random() * 15)];
   }
@@ -85,7 +85,7 @@ function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
 function anim() {
   requestAnimationFrame(anim);
 
-  context.fillStyle = "rgba(0,0,0,0.05)";
+  context.fillStyle ="rgba(0,0,0,0.05)";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   particlesArray.forEach((particle) => particle.rotate());

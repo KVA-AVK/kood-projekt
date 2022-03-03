@@ -11,12 +11,20 @@
 
 <body class="vh-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="header-logo">Karmeni Projekt :D</div>
-        <div class="header-list">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+ 
+      <div class="row">
+        <div class="header-logo"> 
+          <img src="../images/Karmeni_projekt.png"  />
+        </div>
+      
+    </div>
+    <!--container ends-->
+    <div class="header-list">
             <ul>
                 <li><a href="../index.html">Esileht</a></li>
-                <li><a href="../lessons.html">Õppetunnid</a></li>
+                <li><a href="../lessons.html">Testimised</a></li>
             </ul>
         </div>
     </nav>
@@ -36,9 +44,9 @@
                     var myScore;
 
                     function startGame() {
-                        myGamePiece = new component(30, 30, "red", 10, 120);
+                        myGamePiece = new component(30, 30,"red", 10, 120);
                         myGamePiece.gravity = 0.05;
-                        myScore = new component("15px", "Consolas", "white", 70, 40, "text");
+                        myScore = new component("15px","Consolas","white", 70, 40,"text");
                         myGameArea.start();
                     }
 
@@ -70,8 +78,8 @@
                         this.gravitySpeed = 0;
                         this.update = function () {
                             ctx = myGameArea.context;
-                            if (this.type == "text") {
-                                ctx.font = this.width + " " + this.height;
+                            if (this.type =="text") {
+                                ctx.font = this.width +"" + this.height;
                                 ctx.fillStyle = color;
                                 ctx.fillText(this.text, this.x, this.y);
                             } else {
@@ -126,14 +134,14 @@
                             minGap = 50;
                             maxGap = 200;
                             gap = Math.floor(Math.random() * (maxGap - minGap + 1) + minGap);
-                            myObstacles.push(new component(10, height, "green", x, 0));
-                            myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+                            myObstacles.push(new component(10, height,"green", x, 0));
+                            myObstacles.push(new component(10, x - height - gap,"green", x, height + gap));
                         }
                         for (i = 0; i < myObstacles.length; i += 1) {
                             myObstacles[i].x += -1;
                             myObstacles[i].update();
                         }
-                        myScore.text = "SCORE: " + myGameArea.frameNo;
+                        myScore.text ="SCORE:" + myGameArea.frameNo;
                         myScore.update();
                         myGamePiece.newPos();
                         myGamePiece.update();

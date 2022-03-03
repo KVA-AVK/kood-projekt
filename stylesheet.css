@@ -1,16 +1,22 @@
 html,body {
-  font-family: "Avenir Next";
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family:"Avenir Next";
   margin: 0;
   padding: 0;
-
   background-color: rgba(0, 0, 0, 1);
+}
 
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .navbar {
   background-color: #bc426a;
   color: #fff;
-
 }
 
 .header-logo {
@@ -29,61 +35,60 @@ li {
 }
 
 .container-fluid {
-  height: 72%;
+  height: inherit;
+  max-height: 72%;
 }
-
 
 .background {
     background-image: url("images/lego.jpg");
-    background-size: contain;
+    background-size:inherit;
     padding: 20px;
     height: 100%;
 }
 
-.transbox {
+.footer.jumbotron {
+  padding: 15px;
+  /* position: fixed; */
+  margin-bottom: 0px;
+  height: 7%;
+  width: 100%;
+  background-color: hsl(286, 100%, 17%); 
+  text-align: center;
+  color: #fff;
+}
 
+.transbox {
   width: 100%;
   background-color: #ffffff;
   border: 1px solid black;
   opacity: 0.85;
 }
 
+div.transbox .row, h2 {
+  padding:50px;
+}
+
 div.transbox p {
-  margin: 5%;
+  font-size: 20px;
+  font-style: italic;
+  text-align:left;
+}
+
+div.transbox .card-title.bg-info{
   font-size: 24px;
   font-weight: bold;
-  color: #000000;
-  }
-
-div.transbox a {
-  margin: 5%;
-  font-size: 24px;
-  font-weight: bold;
-  color: #2e2e2e;
+  text-transform: uppercase;
 }
 
-.jumbotron {
-  background-color: #83725d; 
-  text-align: center;
-  color: #fff;
-
-
+div.transbox img {
+  border: 5px solid rgb(243, 220, 9, 0.3);
+  border-radius: 60px;
 }
-
-.footer.jumbotron {
-  padding-top: 25px;
-  padding-bottom: 25px;
-
-}
-
-
 
 .copy-container h1 {
   font-size: 60px;
   padding: 50px;
 }
-
-
 
 .copy-container span {
   color: #ff4a4a;
@@ -102,7 +107,7 @@ div.transbox a {
 }
 
 .contents-item {
-  float: "left";
+  float: left;
   margin-right: 40px;
 }
 
@@ -195,7 +200,7 @@ a:link, a:visited {
 }
 
 .row:after {
-  content: "";
+  content:"";
   display: table;
   clear: both;
 }
