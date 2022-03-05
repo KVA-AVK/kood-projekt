@@ -4,34 +4,35 @@
 <head>
     <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   <title>Karmeni projekt</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="icon" href="../images/icon.PNG" sizes="32x32">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../stylesheet.css">
 
 </head>
 
 <body class="vh-100">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    
- 
-      <div class="row">
-        <div class="header-logo"> 
-          <img src="../images/Karmeni_projekt.png"  />
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="header-logo">
+              <img src="../images/Karmeni_projekt.png" />
+            </div>
+          </div>
+          <!--container ends-->
+          <div class="header-list">
+            <label class="btn btn-secondary btn-lg">
+              <a class="nav-link" href="../index.html">Esileht</a>
+            </label>
+            <label class="btn btn-secondary btn-lg ">
+              <a class="nav-link" href="../lessons.html">Testimised</a>
+            </label>
+          </div>
         </div>
-      
-    </div>
-    <!--container ends-->
-    <div class="header-list">
-            <ul>
-                <li><a href="../index.html">Esileht</a></li>
-                <li><a href="../lessons.html">Testimised</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- HEADER UP TO HERE -->
-    <div class="main">
-        <div class="background">
-            <div class="transbox">
+      </nav>
+      <!-- HEADER UP TO HERE -->
+    <div class="container-fluid">
+        <div class="row background">
+            <div class="col transbox">
                 <br>
                 <button onclick="startGame()" onkeydown="accelerate(-0.2)" onkeyup="accelerate(0.05)">START</button>
                 <button onclick="location.reload()" onkeydown="accelerate(-0.2)" onkeyup="accelerate(0.05)">RESTART</button>
