@@ -11,8 +11,8 @@ ctx.strokeStyle = `hsl(${hue}, 100%, 50%)` //GET THIS FROM MOTHER-EFFINGHSL.COM
 // -- MAKE A VARIABLE CALLED HEIGHT AND WIDTH FROM THE SAME PROPERTIES ON OUR CANVAS
 const { width, height} = canvas;
 // -- CREATE RANDOM X AND Y COORDINATES
-let x = Math.floor(Math.random()* width);
-let y = Math.floor(Math.random()* width);
+let x = Math.floor(Math.random()* (width/2));
+let y = Math.floor(Math.random()* (width/2));
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 10;
