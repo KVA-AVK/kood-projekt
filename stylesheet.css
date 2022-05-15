@@ -79,7 +79,7 @@ h3 {
 }
 
 .card:hover {
-  box-shadow: 6px 6px 6px rgba(241, 167, 71, 0.671);
+  box-shadow: 6px 6px 6px rgba(110, 110, 110, 0.671);
   transform: scale(1.01)
 }
 
@@ -214,6 +214,7 @@ input, textarea {
   margin: 0px;
   padding: 0px;
   width: 80%;
+  
 }
 
 label {
@@ -228,6 +229,7 @@ fieldset .input {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px;
+  display:flexbox
 }
 
 .form-choose {
@@ -245,13 +247,32 @@ form li + li, li {
 }
 
 .icon {
-  padding: 20px;
+  margin-top: 5px;
+  padding: 13px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
   background: rgb(30, 144, 255);
   color: white;
-  min-width: 60px;
-  text-align: center;
-  border-radius: 60px;
 }
+.fa-image {
+  margin-top: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.form-control:hover + .hide {
+  display: block;
+  color: red;
+  text-transform: uppercase;
+}
+
+
 
 
 /* Add CSS for contact-submit */
@@ -301,17 +322,42 @@ a:link, a:visited {
   }
 }
 
-/* @media screen and (max-width: 600px) {
-  .col-1, .col-2, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }} */
-
-
-/* input:invalid {
-  border: 2px dashed red;
+.form-control-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.form-control-file::before {
+  content: 'Vali fail oma seadmest...';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
 }
 
-input:valid {
-  border: 2px solid rgb(0, 255, 55);
-} */
+
+
+
+@media screen and (max-width: 600px) {
+  .col-1, .col-2, button[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }} 
+
+
+#sliderValue {
+  text-align: center;
+  font-weight: bold;
+  font: 1.4em sans-serif;
+}  
+
+input:not(:focus):not(:placeholder-shown):invalid {
+  border: 2px dashed rgba(253, 59, 59, 0.3);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;	
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+  border: 2px solid rgba(35, 250, 82, 0.2);
+}

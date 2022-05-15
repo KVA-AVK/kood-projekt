@@ -49,11 +49,11 @@
 
 
         <div class="form-row">
-          <div class="input-group">
-            <i class="fa fa-envelope fa-fw icon"></i>
+          <div class="input-group mb-2">
+            <i class="fa fa-envelope fa-lg icon"></i>
             <div class="input-group-prepend">
               <input type="email" class="form-control" id="email" name="email" onfocus="this.placeholder='Sinu email..'"
-                placeholder="">
+                placeholder="" required>
             </div>
           </div>
         </div>
@@ -61,36 +61,38 @@
 
         <div class="form-row">
           <div class="input-group mb-2">
-            <i class="fa fa-phone fa-fw icon"> </i>
+            <i class="fa fa-phone fa-lg icon"> </i>
             <div class="input-group-prepend">
-              <input type="number" class="form-control" id="tel" name="tel" placeholder="Sinu telefoninumber..."
-                required>
+              <input type="number" class="form-control" id="num" name="num" placeholder="Number..." required>
             </div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="input-group mb-2">
-            <i class="fa fa-image fa-fw icon"></i>
+            <i class="fa fa-image fa-lg icon"></i>
             <div class="input-group-prepend">
-              <input type="file" class="form-control" name="file" id="file" accept="image/*" multiple>
+              <input type="file" class="form-control-file" name="file" id="file" accept="image/*" multiple>
             </div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="input-group mb-2">
-            <i class="fa fa-comment fa-fw icon"></i>
+            <i class="fa fa-comment fa-lg icon"></i>
             <div class="input-group-prepend">
-              <input id="msg" class="form-control" name="user_message" placeholder="Sinu sõnum...">
+              <input id="msg" class="form-control" name="msg" placeholder="Sinu sõnum..." required>
+              <div class="hide">Sisesta sõnum </div>
             </div>
+
           </div>
         </div>
 
         <div class="form-row">
-          <fieldset>
+          <div class="offset-md-1"></div>
+          <fieldset class="col-lg-auto">
             <div class="form-choose col h-100">
-              <legend>Vali kõik juurviljad, mida sulle meeldib süüa</legend>
+              <legend>Vali üks või mitu:</legend>
               <ul>
                 <li>
                   <div class="input-group mb-2">
@@ -109,32 +111,44 @@
                   </div>
                 </li>
                 <li>
-                  <div class="input-group mb-3">
+                  <div class="input-group mb-2">
                     <div class="input-group-prepend">
                       <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
-                      <label for="cabbage">Kapsas</label>
+                      <label for="cabbage">Kapsad</label>
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
           </fieldset>
-          <div class="form-choose col-1"></div>
-          <fieldset>
+          <div class="offset-md-1"></div>
+          <fieldset class="col-lg-auto">
             <div class="form-choose col h-100">
-              <legend>Mis on sinu lemmik eine?</legend>
+              <legend>Vali üks:</legend>
               <ul>
                 <li>
-                  <label for="soup">Supp</label>
-                  <input type="radio" id="soup" name="meal" value="soup" checked>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+
+                      <input type="radio" id="tatar" name="meal" value="tatar" checked><label for="tatar">Tatar</label>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  <label for="curry">Karri</label>
-                  <input type="radio" id="curry" name="meal" value="curry">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+
+                      <input type="radio" id="curry" name="meal" value="curry"><label for="curry">Karri</label>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  <label for="pizza">Pitsa</label>
-                  <input type="radio" id="pizza" name="meal" value="pizza">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+
+                      <input type="radio" id="pizza" name="meal" value="pizza"><label for="pizza">Pitsa</label>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -142,20 +156,34 @@
         </div>
         <div class="form-row">
           <div class="input-group mb-1">
-            <label for="color">Sinu lemmikvärv: </label>
-            <input class="form-control" type="color" name="color" id="color">
+            <label for="color">Vali värv: </label>
+            <input class="form-control" type="color" name="color" id="color" value="#FFC502">
           </div>
         </div>
         <div class="form-row">
           <div class="input-group mb-2">
-            <label for="range">Sinu lemmiknumber: </label>
-            <input class="form-control" type="range" name="range" id="range" min="50000" max="500000" step="100"
-              value="250000">
+            <label for="range">Vali ulatus: </label>
+            <input class="form-control" type="range" name="range" id="range" min="1" max="10" step="1" value="4"
+              onchange="showValue(this.value)" list="tickmarks">
+              <datalist id="tickmarks">
+                <option value="0" label="0"></option>
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5" label="5"></option>
+                <option value="6"></option>
+                <option value="7"></option>
+                <option value="8"></option>
+                <option value="9"></option>
+                <option value="10" label="10"></option>
+                </datalist>
             <output class="range-output" for="range"></output>
           </div>
         </div>
+        <span id="sliderValue"></span>
         <p>* Kohustuslikud väljad peavad olema täidetud</p>
-        <input class="contact-submit" type="submit" value="Saada" onclick='alert("Tänud!!")' ;>
+        <input class="contact-submit" type="submit" value="Saada" onclick="alert('Tänud! Need andmed ei läinud kuhugi!')" ;>
         <input class="contact-reset" type="reset" onclick="myFunction()" value="Tühista">
 
       </form>
@@ -165,6 +193,10 @@
 
 
   <script>
+
+    function showValue(x) {
+      document.getElementById("sliderValue").innerHTML = x;
+    }
     function myFunction() {
       document.getElementById("contact-form").reset();
     }
@@ -173,11 +205,14 @@
 
     email.addEventListener("input", function (event) {
       if (email.validity.typeMismatch) {
-        email.setCustomValidity("I am expecting an e-mail address!");
+        email.setCustomValidity("Sisesta e-maili address!");
       } else {
         email.setCustomValidity("");
       }
     });
+
+
+
   </script>
 
   <!-- FOOTER FROM HERE -->
